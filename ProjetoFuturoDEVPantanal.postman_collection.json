@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "ea566ff8-907b-4135-9828-81260e8f941e",
+		"name": "ProjetoFuturoDEVPantanal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Musicas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/musicas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"musicas"
+					],
+					"query": [
+						{
+							"key": "possuiGenero",
+							"value": "f",
+							"disabled": true
+						},
+						{
+							"key": "generoId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Musica",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Special\",\r\n    \"interprete\": \"Lizzo\",\r\n    \"genero_id\": 1 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/musicas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"musicas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
